@@ -1,0 +1,104 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Services - InDataAI{% endblock %}
+
+{% block content %}
+
+<!-- Page Banner -->
+<section class="page-banner">
+    <div class="banner-shape"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Services</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item active">Services</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-page section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <span class="section-badge">What We Offer</span>
+                <h2 class="section-title">Our IT Digital Services</h2>
+                <p class="section-desc">Premium Technology Services That Accelerate Growth And Reduce Operational Friction.</p>
+            </div>
+        </div>
+        <div class="row g-4 mt-3">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-page-card">
+                    <div class="sp-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h4>Web Development</h4>
+                    <p>Modern, secure and fully responsive web applications for your business. We build fast, scalable, and brand-led web experiences that convert visitors into customers.</p>
+                    <a href="{% url 'contact' %}" class="sp-read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-page-card">
+                    <div class="sp-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h4>App Development</h4>
+                    <p>Android &amp; iOS apps with high performance and cross-platform support. Native-quality mobile experiences with intuitive UX and smooth performance.</p>
+                    <a href="{% url 'contact' %}" class="sp-read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-page-card">
+                    <div class="sp-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>Digital Marketing</h4>
+                    <p>Boost your brand presence with SEO, social media &amp; paid campaigns. Targeted digital growth strategies to boost visibility and drive measurable leads.</p>
+                    <a href="{% url 'contact' %}" class="sp-read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-page-card">
+                    <div class="sp-icon"><i class="fas fa-brain"></i></div>
+                    <h4>AI &amp; Machine Learning</h4>
+                    <p>Intelligent automation &amp; predictive analytics tailored to your needs. We build custom AI and ML models that automate processes and deliver powerful insights.</p>
+                    <a href="{% url 'contact' %}" class="sp-read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-page-card">
+                    <div class="sp-icon"><i class="fas fa-building"></i></div>
+                    <h4>Real Estate Software</h4>
+                    <p>End-to-end real-estate CRM with leads, sales, billing &amp; automation. Complete property management solution for real estate businesses of all sizes.</p>
+                    <a href="{% url 'contact' %}" class="sp-read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-page-card">
+                    <div class="sp-icon"><i class="fas fa-users-cog"></i></div>
+                    <h4>HRMS &amp; Custom ERP</h4>
+                    <p>Complete HR, payroll, attendance &amp; customized business ERP solutions. Streamline your operations with our powerful enterprise resource planning tools.</p>
+                    <a href="{% url 'contact' %}" class="sp-read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-padding bg-primary-custom">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h3 class="cta-title">Ready to Transform Your Business?</h3>
+                <p class="cta-desc">Let's discuss how InDataAI can help you achieve your technology goals.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                <a href="{% url 'contact' %}" class="btn btn-white-custom">Get Free Consultation <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,280 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}InDataAI - Innovating Digital Solutions Since 2019{% endblock %}
+
+{% block content %}
+
+<!-- Hero / Banner Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <span class="hero-tag">Digital Growth</span>
+                    <h1 class="hero-title">Innovating Digital <br>Solutions Since <br><span>2019</span></h1>
+                    <p class="hero-desc">InDataAi is a fast-growing software startup in Hubli. We empower businesses with modern technology — from Real Estate CRM solutions to custom mobile apps, AI automation, and complete web development services.</p>
+                    <div class="hero-btn-wrap mt-4">
+                        <a href="{% url 'services' %}" class="btn btn-primary-custom">Find Solutions <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-img-side text-center mt-5 mt-lg-0">
+                    <img src="{% static 'img/home.png' %}" alt="Team InDataAI" class="img-fluid" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="hero-img-placeholder" style="display:none;">
+                        <div class="phi">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Tech Innovators</h4>
+                            <p>Delivering Excellence</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-exp-badge">
+                        <div class="badge-icon"><i class="fas fa-award"></i></div>
+                        <div>
+                            <strong>6+</strong>
+                            <span>Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brand / Partners Marquee -->
+<section class="brand-section">
+    <div class="container">
+        <div class="brand-marquee-wrap">
+            <div class="brand-marquee">
+                <div class="brand-track">
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-1.png" alt="Brand 1" onerror="this.parentElement.innerHTML='<span class=brand-text>TechCorp</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-2.png" alt="Brand 2" onerror="this.parentElement.innerHTML='<span class=brand-text>DataSoft</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-3.png" alt="Brand 3" onerror="this.parentElement.innerHTML='<span class=brand-text>CloudNet</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-4.png" alt="Brand 4" onerror="this.parentElement.innerHTML='<span class=brand-text>InfoSys</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-5.png" alt="Brand 5" onerror="this.parentElement.innerHTML='<span class=brand-text>DigiTech</span>'"></div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-1.png" alt="Brand 1" onerror="this.parentElement.innerHTML='<span class=brand-text>TechCorp</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-2.png" alt="Brand 2" onerror="this.parentElement.innerHTML='<span class=brand-text>DataSoft</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-3.png" alt="Brand 3" onerror="this.parentElement.innerHTML='<span class=brand-text>CloudNet</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-4.png" alt="Brand 4" onerror="this.parentElement.innerHTML='<span class=brand-text>InfoSys</span>'"></div>
+                    <div class="brand-item"><img src="https://indataai.in/assets/img/brand/brand-5.png" alt="Brand 5" onerror="this.parentElement.innerHTML='<span class=brand-text>DigiTech</span>'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-header text-center">
+                    <span class="section-badge">Smart Services</span>
+                    <h2 class="section-title">IT Digital Services</h2>
+                    <p class="section-desc">Premium Technology Services That Accelerate Growth And Reduce Operational Friction.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4>Web Design &amp; Development</h4>
+                    <p>Modern Websites That Convert. Fast, Responsive, And Brand-Led Experiences To Grow Conversions.</p>
+                    <a href="{% url 'services' %}" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Mobile App Development</h4>
+                    <p>Native-Quality Mobile Experiences—Intuitive UX, Smooth Performance, And Dependable Post-Launch Support.</p>
+                    <a href="{% url 'services' %}" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>AI &amp; Machine Learning Solutions</h4>
+                    <p>Empower Your Business With Intelligent, Data-Driven Solutions. We Build Custom AI And ML Models That Automate Processes.</p>
+                    <a href="{% url 'services' %}" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Digital Marketing</h4>
+                    <p>Targeted Digital Growth—SEO, Paid Campaigns, And Content To Boost Visibility And Drive Measurable Leads.</p>
+                    <a href="{% url 'services' %}" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About / Why Choose Us Section -->
+<section class="about-section section-padding bg-light-custom">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="about-image-wrap">
+                    <img src="{% static 'img/team.png' %}" alt="InDataAI Team" style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <span class="section-badge">About Us</span>
+                    <h2 class="section-title">IT Infrastructure most active Solutions</h2>
+                    <p>IT Technology Is A Broad Category Encompassing All Aspects Of Information Technology And The Application Of Technology In IT.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> Data Management Experts</li>
+                        <li><i class="fas fa-check-circle"></i> Mobile App Developments</li>
+                        <li><i class="fas fa-check-circle"></i> IT Infrastructure Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Data Analytics Consulting</li>
+                    </ul>
+                    <a href="{% url 'about' %}" class="btn btn-primary-custom mt-3">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonial-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-header text-center">
+                    <span class="section-badge">Praise &amp; Feedback</span>
+                    <h2 class="section-title">Customer Experiences</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-2">
+            {% if testimonials %}
+                {% for t in testimonials %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= t.rating %}
+                                    <i class="fas fa-star"></i>
+                                {% else %}
+                                    <i class="far fa-star"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <p class="testimonial-text">"{{ t.message }}"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">{{ t.name|first }}</div>
+                            <div class="author-info">
+                                <h5>{{ t.name }}</h5>
+                                <span>{{ t.designation }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"InDataAI provided us with an exceptional real estate software solution. Our team's productivity increased, and customer follow-ups became fully automated."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h5>Rohit Shetty</h5>
+                            <span>Real Estate Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The InDataAI team delivered a custom web application exactly as we required. Support and service are excellent—highly reliable and professional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h5>Ananya Deshmukh</h5>
+                            <span>Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"We implemented InDataAI's logistics software, and it has streamlined our daily operations. User-friendly, accurate, and great customer support!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h5>Mahesh Patil</h5>
+                            <span>Logistics Company</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Products Carousel Section -->
+<section class="products-section section-padding" style="background:#eef4ff;">
+    <div class="container-fluid px-0">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <span class="section-badge">Our Products</span>
+                <h2 class="section-title">Our Software Products</h2>
+            </div>
+        </div>
+
+        <div class="prod-carousel-wrap">
+            <div class="prod-carousel">
+
+                <!-- Left side card -->
+                <div class="prod-slide prod-slide--prev">
+                    <img src="https://indataai.in/assets/img/gallery/gallery-2.png" alt="ILP Law Firm Software"
+                         onerror="this.src='{% static 'img/team.png' %}'">
+                </div>
+
+                <!-- Center card — always active -->
+                <div class="prod-slide prod-slide--active">
+                    <img src="https://indataai.in/assets/img/gallery/gallery-1.png" alt="Real Estate Management Software"
+                         onerror="this.src='{% static 'img/home.png' %}'">
+                    <div class="prod-info-box">
+                        <h5>Real Estate Management Software</h5>
+                        <span>Leads | Sales | Agreements | Automation</span>
+                    </div>
+                </div>
+
+                <!-- Right side card -->
+                <div class="prod-slide prod-slide--next">
+                    <img src="https://indataai.in/assets/img/gallery/gallery-3.png" alt="Takshashila Gurukula"
+                         onerror="this.src='{% static 'img/team.png' %}'">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

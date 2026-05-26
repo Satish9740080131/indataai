@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}InDataAI - Innovating Digital Solutions{% endblock %}</title>
+    <meta name="description" content="InDataAI is a fast-growing software startup in Hubli. We empower businesses with modern technology.">
+    <link rel="icon" type="image/svg+xml" href="{% static 'img/favicon.svg' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2.0">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader"><div class="preloader-inner"><div class="spinner"></div></div></div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar sticky-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <span class="logo-text">InData<span class="logo-highlight">AI</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link {% if page == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link {% if page == 'about' %}active{% endif %}" href="{% url 'about' %}">About Us</a></li>
+                <li class="nav-item"><a class="nav-link {% if page == 'services' %}active{% endif %}" href="{% url 'services' %}">Services</a></li>
+                <li class="nav-item"><a class="nav-link {% if page == 'portfolio' %}active{% endif %}" href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link {% if page == 'event' %}active{% endif %}" href="{% url 'event' %}">Event</a></li>
+                {% if page == 'home' %}
+                <li class="nav-item"><a class="nav-link {% if page == 'testimonial' %}active{% endif %}" href="{% url 'testimonial' %}">Client Say</a></li>
+                {% endif %}
+                <li class="nav-item"><a class="nav-link {% if page == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a></li>
+                <li class="nav-item ms-lg-2">
+                    <a class="nav-link nav-btn" href="{% url 'request_quote' %}">Get Quote</a>
+                </li>
+            </ul>
+            <div class="d-lg-none mt-3 pt-3 border-top">
+                <a href="tel:+919535347161" class="d-block text-muted small mb-1"><i class="fas fa-phone me-2 text-primary"></i>+91 9535347161</a>
+                <a href="mailto:team@indataai.in" class="d-block text-muted small"><i class="fas fa-envelope me-2 text-primary"></i>team@indataai.in</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{% if messages %}
+<div class="container mt-2">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show py-2" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% block content %}{% endblock %}
+
+<!-- Newsletter -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <h3 class="newsletter-title">Subscribe Our newsletter</h3>
+            </div>
+            <div class="col-lg-6">
+                <form method="POST" action="{{ request.path }}" novalidate>
+                    {% csrf_token %}
+                    <input type="hidden" name="newsletter" value="1">
+                    <div class="newsletter-form-group">
+                        <input type="email" name="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <a href="{% url 'home' %}" class="footer-logo">InData<span>AI</span></a>
+                        <p class="footer-about-text">Financial planners help people to gain knowledge about technology and digital solutions for a better future.</p>
+                        <h6 class="footer-widget-title">Follow Us</h6>
+                        <div class="footer-social-links">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank" rel="noopener"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="footer-widget">
+                        <h6 class="footer-widget-title">Quick Link</h6>
+                        <ul class="footer-links">
+                            <li><a href="{% url 'services' %}"><i class="fas fa-angle-right"></i> Service</a></li>
+                            <li><a href="{% url 'faq' %}"><i class="fas fa-angle-right"></i> FAQ</a></li>
+                            <li><a href="{% url 'testimonial' %}"><i class="fas fa-angle-right"></i> Testimonial</a></li>
+                            <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="footer-widget">
+                        <h6 class="footer-widget-title">Our Services</h6>
+                        <ul class="footer-links">
+                            <li><a href="{% url 'services' %}"><i class="fas fa-angle-right"></i> Hosting Solution</a></li>
+                            <li><a href="{% url 'services' %}"><i class="fas fa-angle-right"></i> Cyber Security</a></li>
+                            <li><a href="{% url 'services' %}"><i class="fas fa-angle-right"></i> Network Analysis</a></li>
+                            <li><a href="{% url 'services' %}"><i class="fas fa-angle-right"></i> Data Recovery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h6 class="footer-widget-title">Contact</h6>
+                        <ul class="footer-contact">
+                            <li>
+                                <span class="fc-label">Email</span>
+                                <a href="mailto:team@indataai.in">team@indataai.in</a>
+                            </li>
+                            <li>
+                                <span class="fc-label">Address</span>
+                                <a href="https://maps.app.goo.gl/9NhS92ChtXd387Jc8" target="_blank" rel="noopener">3rd Floor, Office No. 11, Stellar Mall, Beside JGCC College, Jayanagar, Vidya Nagar, Hubballi, Karnataka 580021</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h6 class="footer-widget-title">Newsletter</h6>
+                        <p class="footer-newsletter-text">Financial Planners Help People To Gain Knowledge About Technology</p>
+                        <form method="POST" action="{{ request.path }}" novalidate>
+                            {% csrf_token %}
+                            <input type="hidden" name="newsletter" value="1">
+                            <div class="footer-newsletter-form">
+                                <input type="email" name="email" placeholder="Enter your email" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; InDataAi 2025 | All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <a href="{% url 'about' %}">Privacy Policy</a>
+                    <span class="mx-2">|</span>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

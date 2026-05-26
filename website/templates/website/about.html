@@ -1,0 +1,254 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}About Us - InDataAI{% endblock %}
+
+{% block content %}
+
+<!-- ── Page Banner ── -->
+<section class="page-banner">
+    <div class="banner-shape"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>About Us</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item active">About Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── About Intro ── -->
+<section class="about-intro-section section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <!-- Left: Text -->
+            <div class="col-lg-6">
+                <span class="section-badge">About Us</span>
+                <h2 class="section-title">Welcome to <span class="text-primary-custom">INDATAAI</span></h2>
+
+                <p class="about-para">Welcome To INDATAAI, Your Trusted Partner For Cutting-Edge Technology Solutions. Founded In 2019 And Headquartered In Hubli, Dharwad District, We Deliver Smart, Scalable, And Future-Ready Software Solutions For Businesses Of All Sizes.</p>
+                <p class="about-para">We Are Powered By A Skilled And Dedicated Team Committed To Quality And Client Success. With A Strong Focus On Reliability, Innovation, And Excellence, We Ensure Every Project Meets The Highest Standards—Without Compromise.</p>
+
+                <ul class="about-check-list">
+                    <li><i class="fas fa-check-circle"></i> Data Management</li>
+                    <li><i class="fas fa-check-circle"></i> Mobile App Development</li>
+                    <li><i class="fas fa-check-circle"></i> IT Infrastructure Solutions</li>
+                    <li><i class="fas fa-check-circle"></i> Data Analytics &amp; Consulting</li>
+                </ul>
+
+                <div class="vm-box mt-4">
+                    <div class="vm-row">
+                        <div class="vm-icon"><i class="fas fa-eye"></i></div>
+                        <div class="vm-body">
+                            <h5>Vision</h5>
+                            <p>To Lead In Technological Innovation By Empowering Businesses With Intelligent, Transformative, And Data-Driven Solutions That Shape The Future.</p>
+                        </div>
+                    </div>
+                    <div class="vm-row">
+                        <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="vm-body">
+                            <h5>Mission</h5>
+                            <p>To Deliver High-Quality, Innovative Technology Solutions That Create Lasting Value. We Work Closely With Clients, Embrace Emerging Technologies, And Foster Continuous Improvement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{% url 'contact' %}" class="btn-primary-custom mt-4 d-inline-flex">
+                    Contact Us <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+            <!-- Right: Image / Stats -->
+            <div class="col-lg-6">
+                <div class="about-right-wrap">
+                    <div class="about-img-block">
+                        <div class="aib-inner">
+                            <div class="about-img-block">
+    <img src="{% static 'img/home.png' %}" alt="About Image" class="full-image">
+</div>
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>InDataAI Solutions</h4>
+                            <p>Building Smart Digital Futures Since 2019</p>
+                        </div>
+                    </div>
+                    <div class="about-stats-badge">
+                        <div class="asb-item">
+                            <span class="asb-num">6+</span>
+                            <span class="asb-label">Years Exp.</span>
+                        </div>
+                        <div class="asb-divider"></div>
+                        <div class="asb-item">
+                            <span class="asb-num">200+</span>
+                            <span class="asb-label">Projects</span>
+                        </div>
+                        <div class="asb-divider"></div>
+                        <div class="asb-item">
+                            <span class="asb-num">50+</span>
+                            <span class="asb-label">Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── Why Choose Us ── -->
+<section class="why-section">
+    <div class="container">
+        <h2 class="why-section-title">Why Choose Us ?</h2>
+        <div class="why-title-underline"></div>
+        <div class="why-icon-row">
+            <div class="why-icon-item">
+                <div class="why-icon-circle"><i class="fas fa-medal"></i></div>
+                <span class="why-icon-label">Quality Deliverables</span>
+            </div>
+            <div class="why-icon-item">
+                <div class="why-icon-circle"><i class="fas fa-book-open"></i></div>
+                <span class="why-icon-label">Expertise</span>
+            </div>
+            <div class="why-icon-item">
+                <div class="why-icon-circle"><i class="fas fa-users"></i></div>
+                <span class="why-icon-label">Customer Centric</span>
+            </div>
+            <div class="why-icon-item">
+                <div class="why-icon-circle"><i class="fas fa-paint-brush"></i></div>
+                <span class="why-icon-label">Creative Designs</span>
+            </div>
+            <div class="why-icon-item">
+                <div class="why-icon-circle"><i class="fas fa-dollar-sign"></i></div>
+                <span class="why-icon-label">Honest Pricing</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── What We Do ── -->
+<section class="what-we-do-section section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <!-- Left: text -->
+            <div class="col-lg-6">
+                <div class="wwd-content">
+
+                    <div class="wwd-block">
+                        <h4 class="wwd-title">What We Do</h4>
+                        <p class="wwd-text">We Work Closely With Businesses To Understand Their Goals, Challenges, And Aspirations—Then Build Smart Digital Solutions That Help Them Grow.</p>
+                    </div>
+
+                    <div class="wwd-block">
+                        <h4 class="wwd-title">Our Mission</h4>
+                        <p class="wwd-text">To Help Startups, SMEs, And Enterprises Leverage Technology To Operate Efficiently, Scale Faster, And Stay Ahead In A Competitive Market.</p>
+                    </div>
+
+                    <div class="wwd-block">
+                        <h4 class="wwd-title">Our Goal</h4>
+                        <p class="wwd-text">To Build More Smart, Future-Ready Businesses While Creating Opportunities In The Field Of Information Technology.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: office photo -->
+            <div class="col-lg-6">
+                <div class="wwd-img-wrap">
+                    <img src="https://indataai.in/assets/img/about/about-1.png"
+                         alt="InDataAI Office"
+                         onerror="this.onerror=null;this.src='{% static 'img/team.png' %}'">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ── Work Process ── -->
+<section class="process-section section-padding">
+    <div class="container" style="position:relative;z-index:1;">
+        <div class="row align-items-center g-5">
+
+            <!-- Left: title + steps -->
+            <div class="col-lg-6">
+                <span class="process-header-badge">Work Process</span>
+                <h2 class="process-main-title">Sustainable and<br>Responsible Computing</h2>
+                <p class="process-main-desc">Discuss strategies for reducing energy consumption in data centers, personal devices, and reduce power usage.</p>
+
+                <div class="process-step">
+                    <div class="process-step-num">01</div>
+                    <div class="process-step-body">
+                        <h5>Assess Requirements Precisely</h5>
+                        <p>Begin by comprehensively understanding your business needs to ensure a perfect fit for tech solutions.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-num">02</div>
+                    <div class="process-step-body">
+                        <h5>Develop Custom Solutions</h5>
+                        <p>Engage in crafting tailor-made software designed meticulously to align with your specific targets.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-num">03</div>
+                    <div class="process-step-body">
+                        <h5>Implement And Support</h5>
+                        <p>Seamlessly integrate the new systems into framework with ongoing support for continual optimization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: stacked images -->
+            <div class="col-lg-6">
+                <div class="process-img-stack">
+                    <!-- Top image — team working (wide landscape) -->
+                    <div class="process-img-top">
+                        <img src="{% static 'img/teamwork.jpg' %}" alt="Team working together">
+                    </div>
+                    <!-- Bottom: stat block + second image side by side -->
+                    <div class="process-img-bottom-wrap">
+                        <div class="process-img-stat">
+                            <span class="stat-num">6+</span>
+                            <span class="stat-label">years of<br>experiences</span>
+                        </div>
+                        <div class="process-img-right">
+                            <img src="{% static 'img/home.png' %}" alt="Team collaborating">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── CTA Strip ── -->
+<section class="about-cta-section">
+    <div class="container">
+        <div class="about-cta-inner">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h3>Ready to Build Something Great?</h3>
+                    <p>Let's discuss your project and see how InDataAI can help you grow faster with the right technology.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="{% url 'contact' %}" class="btn-white-custom">
+                        Get In Touch <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

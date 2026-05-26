@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+
+# Media uploads (keep folder, ignore contents)
+media/*
+!media/.gitkeep
+
+# Environment
+.env
+.env.*
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup / scratch files
+zip_backup/
+indataai_style.css
+missing_style.css
+
+# OS
+.DS_Store
+Thumbs.db

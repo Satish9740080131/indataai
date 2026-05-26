@@ -1,0 +1,139 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Testimonials - InDataAI{% endblock %}
+
+{% block content %}
+
+<!-- Page Banner -->
+<section class="page-banner">
+    <div class="banner-shape"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Testimonials</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item active">Testimonial</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonial-page section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <span class="section-badge">Praise &amp; Feedback</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-desc">Real experiences from real clients who trusted InDataAI to transform their businesses.</p>
+            </div>
+        </div>
+        <div class="row g-4 mt-3">
+            {% if testimonials %}
+                {% for t in testimonials %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= t.rating %}
+                                    <i class="fas fa-star"></i>
+                                {% else %}
+                                    <i class="far fa-star"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <p class="testimonial-text">"{{ t.message }}"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">{{ t.name|first }}</div>
+                            <div class="author-info">
+                                <h5>{{ t.name }}</h5>
+                                <span>{{ t.designation }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"InDataAI provided us with an exceptional real estate software solution. Our team's productivity increased, and customer follow-ups became fully automated."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info"><h5>Rohit Shetty</h5><span>Real Estate Developer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The InDataAI team delivered a custom web application exactly as we required. Support and service are excellent—highly reliable and professional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info"><h5>Ananya Deshmukh</h5><span>Business Owner</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"We implemented InDataAI's logistics software, and it has streamlined our daily operations. User-friendly, accurate, and great customer support!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info"><h5>Mahesh Patil</h5><span>Logistics Company</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent work on our e-commerce platform. The team was professional, responsive, and delivered beyond our expectations. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P</div>
+                        <div class="author-info"><h5>Priya Kulkarni</h5><span>E-Commerce Owner</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"InDataAI built our hospital management system with great attention to detail. The system is robust, secure, and easy to use for our staff."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info"><h5>Dr. Suresh Nair</h5><span>Hospital Administrator</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The mobile app they developed for our restaurant chain is fantastic. Orders, inventory, and staff management all in one place. Great team!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">V</div>
+                        <div class="author-info"><h5>Vikram Joshi</h5><span>Restaurant Chain Owner</span></div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
