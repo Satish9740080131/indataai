@@ -1,10 +1,6 @@
-/* ============================================
-   InDataAI Clone — Main JavaScript
-   ============================================ */
 (function () {
     'use strict';
 
-    /* ── Preloader ── */
     var preloader = document.getElementById('preloader');
     if (preloader) {
         var loaderHidden = false;
@@ -14,19 +10,16 @@
             preloader.classList.add('hide');
             setTimeout(function () { preloader.style.display = 'none'; }, 500);
         }
-        // Hide as soon as DOM is ready (don't wait for external CDN resources)
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', hideLoader);
         } else {
             hideLoader();
         }
-        // Fallback: force hide after 1.5s no matter what
         setTimeout(hideLoader, 1500);
     }
 
     document.addEventListener('DOMContentLoaded', function () {
 
-        /* ── Sticky navbar shadow on scroll ── */
         var nav = document.getElementById('mainNav');
         if (nav) {
             window.addEventListener('scroll', function () {
@@ -36,7 +29,6 @@
             }, { passive: true });
         }
 
-        /* ── Back to top ── */
         var btn = document.getElementById('backToTop');
         if (btn) {
             window.addEventListener('scroll', function () {
@@ -48,7 +40,6 @@
             });
         }
 
-        /* ── Auto-dismiss alerts after 5 s ── */
         document.querySelectorAll('.alert').forEach(function (el) {
             setTimeout(function () {
                 el.style.transition = 'opacity .4s';
@@ -57,7 +48,6 @@
             }, 5000);
         });
 
-        /* ── Close mobile navbar on link click ── */
         var collapse = document.getElementById('navbarNav');
         if (collapse) {
             collapse.querySelectorAll('.nav-link').forEach(function (link) {
@@ -70,7 +60,6 @@
             });
         }
 
-        /* ── Scroll-reveal ── */
         if ('IntersectionObserver' in window) {
             var io = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
@@ -92,7 +81,6 @@
             });
         }
 
-        /* ── Counter animation ── */
         var counters = document.querySelectorAll('[data-count]');
         if (counters.length && 'IntersectionObserver' in window) {
             var co = new IntersectionObserver(function (entries) {
@@ -117,7 +105,6 @@
             counters.forEach(function (el) { co.observe(el); });
         }
 
-        /* ── Newsletter: prevent empty submit ── */
         document.querySelectorAll('.newsletter-form-group, .footer-newsletter-form').forEach(function (form) {
             var parent = form.closest('form') || form;
             parent.addEventListener('submit', function (e) {
@@ -131,7 +118,6 @@
             });
         });
 
-        /* ── Contact form: spinner on submit ── */
         var cf = document.querySelector('.contact-form');
         if (cf) {
             cf.addEventListener('submit', function () {
@@ -143,9 +129,8 @@
             });
         }
 
-        /* ── Quote form: collect checkboxes ── */
         var checkboxes = document.querySelectorAll('input[name="svc"]');
-        var hiddenSvc  = document.querySelector('input[name="services"]');
+        var hiddenSvc = document.querySelector('input[name="services"]');
         if (checkboxes.length && hiddenSvc) {
             function syncServices() {
                 var vals = [];

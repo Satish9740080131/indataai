@@ -59,7 +59,7 @@ def testimonial(request):
     if handle_newsletter(request):
         return redirect('testimonial')
     return render(request, 'website/testimonial.html', {
-        'testimonials': Testimonial.objects.filter(is_active=True),
+        'testimonials': [],
         'page': 'testimonial',
     })
 
