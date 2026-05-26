@@ -1,19 +1,9 @@
 """
-Create the MySQL database before running migrations.
-Run from the project root: python scripts/create_db.py
-"""
-import MySQLdb
+This script is no longer needed — the project uses SQLite.
+SQLite requires no setup; Django creates db.sqlite3 automatically on first migrate.
 
-try:
-    conn = MySQLdb.connect(host='localhost', user='root', passwd='root123', port=3306)
-    cursor = conn.cursor()
-    cursor.execute(
-        "CREATE DATABASE IF NOT EXISTS indata_clone "
-        "CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-    )
-    conn.commit()
-    cursor.close()
-    conn.close()
-    print("✅ Database 'indata_clone' created successfully!")
-except Exception as e:
-    print(f"❌ Error: {e}")
+Run migrations with:
+    python manage.py migrate
+"""
+print("ℹ️  SQLite is used. No database creation needed.")
+print("   Run: python manage.py migrate")
