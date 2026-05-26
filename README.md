@@ -32,28 +32,22 @@ indataai[clone]/
 
 ## Setup
 
-### 1. Create the MySQL database
+### 1. Run migrations
 ```
-python scripts/create_db.py
-```
-
-### 2. Run migrations
-```
-python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 3. Create a superuser
+### 2. Create a superuser
 ```
 python manage.py createsuperuser
 ```
 
-### 4. Seed sample data
+### 3. Seed sample data
 ```
 python scripts/seed_data.py
 ```
 
-### 5. Run the development server
+### 4. Run the development server
 ```
 python manage.py runserver
 ```
